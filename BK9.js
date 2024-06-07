@@ -10,6 +10,11 @@ app.set("json spaces", 2); //عشان يجيك الرد مفرق اسطر مب �
 const port = process.env.PORT || 3000; //منفذ الخادم
 app.use(api);
 
+function getBaseUrl(req) {
+  return req.protocol + '://' + req.get('host');
+}
+  const test = getBaseUrl(req);
+
 // صفحة نمشي بها حاليا
 app.get("/", (req, res) => {
   res.send(`
@@ -21,7 +26,7 @@ app.get("/", (req, res) => {
     <body>
       <h1>احبكم</h1>
       <p>اتمنى الكل فهم واستفاد</p>
-      <a href="http://localhost:${port}/gpt4?q=السلام%20عليكم">إضغط هنا</a> //localhost تعني المكان الي انت مشغل فيه الموقع
+      <a href="${test}/gpt4?q=السلام%20عليكم">إضغط هنا</a> //localhost تعني المكان الي انت مشغل فيه الموقع
     </body>
     </html>
   `);
