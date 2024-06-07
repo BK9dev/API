@@ -1,0 +1,14 @@
+{
+  "name": "bk9_api",
+  "version": "1.0.0",
+  "description": "A website API with many endpoints",
+  "main": "BK9.js",
+  "scripts": {
+    "start": "node BK9.js"
+    },
+  "author": "bk9",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "express": "^4.18.2"
+    }
+}
