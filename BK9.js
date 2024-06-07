@@ -13,10 +13,10 @@ app.use(api);
 function getBaseUrl(req) {
   return req.protocol + '://' + req.get('host');
 }
-  const test = getBaseUrl(req);
 
 // صفحة نمشي بها حاليا
 app.get("/", (req, res) => {
+    const test = getBaseUrl(req);
   res.send(`
     <!DOCTYPE html>
     <html>
